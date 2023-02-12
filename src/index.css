@@ -13,10 +13,12 @@ code {
 }
 
 /* header */
+@media (max-width: 600px) {
+  .brand-logo img {
+    height: 56px;
+  }
+}
 
-/*.brand-logo img {*/
-/*  max-height: 100%;*/
-/*}*/
 
 /* footer */
 
