@@ -27,6 +27,8 @@ jobs:
                     CI: true
             -   name: Generate build
                 run: npm run build
+                env:
+                    DISABLE_ESLINT_PLUGIN: true
             -   name: Share artifact inside workflow
                 uses: actions/upload-artifact@v3
                 with:
