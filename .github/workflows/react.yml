@@ -37,7 +37,6 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         environment: production
-        concurrency: production
         needs: build
         steps:
             -   name: Get artifact
