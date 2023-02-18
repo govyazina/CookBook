@@ -1,6 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import * as M from 'materialize-css/dist/js/materialize.min'
 
 function Header() {
+    useEffect(() => {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+            console.log(elems);
+    })
     return (
         <header>
             <nav className="brown darken-2">
@@ -16,7 +22,7 @@ function Header() {
             </nav>
 
             <ul className="sidenav" id="mobile-demo">
-                <li><a href="#">login</a></li>
+                <li><a href="/login">login</a></li>
             </ul>
         </header>
     );
