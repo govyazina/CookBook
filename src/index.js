@@ -2,14 +2,26 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './components/App/App';
-import reportWebVitals from './reportWebVitals';
 import 'materialize-css/dist/css/materialize.min.css'
 import * as M from 'materialize-css/dist/js/materialize.min'
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import Login from "./components/Login/Login";
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <App />,
+    },
+    {
+        path: "/login",
+        element: <Login />,
+    },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      <RouterProvider router={router} />
   </React.StrictMode>
 );
 document.addEventListener('DOMContentLoaded', function() {
@@ -17,7 +29,3 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Sidenav.init(elems);
 });
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
