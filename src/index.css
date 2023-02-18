@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-/* header */
+/* Header */
 @media (max-width: 600px) {
   .brand-logo img {
     height: 56px;
@@ -22,7 +22,7 @@ code {
 
 /* footer */
 
-body {
+#root {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
