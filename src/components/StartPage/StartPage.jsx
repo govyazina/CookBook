@@ -1,4 +1,4 @@
-import LinkAddRecipe from "./link-add-recipe";
+import LinkAddRecipe from "../LinkAddRecipe/LinkAddRecipe";
 
 function StartPage() {
     return (
